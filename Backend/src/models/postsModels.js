@@ -23,7 +23,7 @@ export const updatePostModel = async ({ id }) => {
 }
 // DELETE
 export const deletePostModel = async (id) => {
-  const consulta = 'DELETE FROM posts WHERE id = $1'
+  const consulta = 'DELETE FROM posts WHERE id = $1 RETURNING *'
 
   const values = [id]
   const result = await pool.query(consulta, values)

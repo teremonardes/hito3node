@@ -43,6 +43,7 @@ export const updatePost = async (req, res) => {
 export const deletePost = async (req, res) => {
   try {
     const { id } = req.params
+    console.log('Eliminando post con ID:', id)
     const deletePost = await deletePostModel(id)
     if (!deletePost) {
       return res.status(404).json({ error: 'Post no encontrado' })
