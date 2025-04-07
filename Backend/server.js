@@ -11,5 +11,6 @@ app.use(express.json())
 app.use(cors())
 
 app.use(postRoutes)
+// /api/posts por ejemplo
 
 app.listen(PORT, console.log(`🔥 Server On http://localhost:${PORT}`))
